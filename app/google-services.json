@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "612026185042",
+    "firebase_url": "https://order-raw-materials-chsd-default-rtdb.firebaseio.com",
+    "project_id": "order-raw-materials-chsd",
+    "storage_bucket": "order-raw-materials-chsd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612026185042:android:be76a4404e51f4c46e368b",
+        "android_client_info": {
+          "package_name": "com.example.orderrawmaterials"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612026185042-u8hd9gkvqc4a7cggba5g970ejj5in1jk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.orderrawmaterials",
+            "certificate_hash": "a6e1204a405be2cbc7295023e8c82bb9a3206f64"
+          }
+        },
+        {
+          "client_id": "612026185042-dsi24e6smkqn6qlsmbqhce28ukpn5bmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ-BM-9ACWzKZRqG9KJ8SdorCk8vBXX1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612026185042-dsi24e6smkqn6qlsmbqhce28ukpn5bmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
