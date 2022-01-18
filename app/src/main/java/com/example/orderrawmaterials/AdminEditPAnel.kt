@@ -59,24 +59,13 @@ class AdminEditPAnel : AppCompatActivity() {
         apiService =
             Client.getRetrofit("https://fcm.googleapis.com/").create(APIService::class.java)
 
-
-        FirebaseService.getData("Director").observe(this, {
-            for (i in it) {
-                var user = i.getValue(User::class.java)
-                if (user != null) {
-                    rectorsList.add(user)
-                }
-            }
-        })
-
         getValue()
     }
 
 
     private fun getValue() {
         val uid = intent.getStringExtra("s")
-
-        data.getData("Orders").observe(this, {
+        FirebaseService.getData("Orders").observe(this, {
             var m1 = arrayListOf<Data>()
             messageUid = ArrayList()
             messageUid.clear()
@@ -165,6 +154,14 @@ class AdminEditPAnel : AppCompatActivity() {
     }
 
     private fun sendNotify(name: String) {
+        FirebaseService.getData("Director").observe(this, {
+            for (i in it) {
+                var user = i.getValue(User::class.java)
+                if (user != null) {
+                    rectorsList.add(user)
+                }
+            }
+        })
         for (i in rectorsList) {
             apiService.sendNotification(
                 Sender(

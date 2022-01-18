@@ -44,8 +44,8 @@ class DirectorView : AppCompatActivity() {
 
         FirebaseService.getData("Admins").observe(this, {
             adminsList.clear()
-            for (i in it) {
-                var user = i.getValue(User::class.java)
+            it.forEach {f1->
+                var user = f1.getValue(User::class.java)
                 if (user != null) {
                     adminsList.add(user)
                 }
@@ -82,10 +82,10 @@ class DirectorView : AppCompatActivity() {
         var naqt = 0.0
         for (it in orderList) {
             if (it.sum_type == "Qarz") {
-                var a = it.summ.toString().replace("\\s".toRegex(), "")
+                var a = it.summ.toString().replace(",".toRegex(), "")
                 qarz += a.toDouble()
             } else {
-                var a = it.summ.toString().replace("\\s".toRegex(), "")
+                var a = it.summ.toString().replace(",".toRegex(), "")
                 naqt += a.toDouble()
             }
         }
